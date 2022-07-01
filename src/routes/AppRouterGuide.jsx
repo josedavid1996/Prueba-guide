@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ButtonWSP } from '../components/ButtonWSP';
 import { Navlink } from '../components/Navlink';
 import {
   AulaVirtual,
@@ -24,6 +25,8 @@ export const AppRouterGuide = () => {
           <Route path="quienes" element={<Quienes />} />
           <Route path="/" element={<Navigate to="/inicio" />} />
         </Routes>
+
+        <ButtonWSP />
       </BrowserRouter>
     </>
   );

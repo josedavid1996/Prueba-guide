@@ -18,7 +18,7 @@ export const Navlink = () => {
               <p className="text-color-white2 font-semibold text-button  sm:text-sm-button leading-3 text-center pb-1 sm:pb-3  ">
                 Antes de matricula obten una
               </p>
-              <Button text="clase gratuita" />
+              <Button text="clase gratuita" fz="sm" fzSm="2xl" />
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export const Navlink = () => {
             </svg>
           </div>
           <nav
-            className={`absolute top-20 right-0 bg-color-white2 opacity-90 w-full px-6 pt-9 pb-8 sm:w-295  ${
+            className={`absolute z-50 top-20 right-0 bg-color-white2 opacity-90 w-full px-6 pt-9 pb-8 sm:w-295  ${
               activeMenu ? 'block' : 'hidden'
             }`}
           >
