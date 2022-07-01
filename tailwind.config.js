@@ -19,6 +19,7 @@ module.exports = {
       'color-purple': '#8297E0',
       'color-black': '#000000',
       'color-yellow': '#FFC635',
+      hero: '#8D8D8D',
     },
     extend: {
       fontSize: {
@@ -37,7 +38,14 @@ module.exports = {
         78: '4.875rem',
         73: '4.5625rem',
         295: '18.43rem',
-        '-32': '32px',
+        387: '24.18rem',
+        900: '56.25rem',
+      },
+      dropShadow: {
+        heroxl: '3px -3px 9px rgba(0, 0, 0, 0.25)',
+      },
+      minHeight: {
+        '70vh': '70vh',
       },
     },
   },
