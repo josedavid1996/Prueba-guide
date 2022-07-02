@@ -9,3 +9,26 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+@layer utilities {
+  .circle {
+    @apply w-9 h-9 block radios bg-circle mr-1;
+  }
+  .circle-opacity {
+    @apply w-9 h-9 block radios bg-circle-opacity mr-1;
+  }
+  .radios {
+    border-radius: 50%;
+  }
+  .radio-6 {
+    border-radius: 6px;
+  }
+  .radio-btn {
+    border-radius: 92px;
+  }
+  .bg-image-civil {
+    background-image: url('./assets/img/civiles.png');
+  }
+  .bg-image-militar {
+    background-image: url('./assets/img/civiles.png');
+  }
+}

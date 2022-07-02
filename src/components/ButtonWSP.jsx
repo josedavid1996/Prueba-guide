@@ -2,7 +2,7 @@ export const ButtonWSP = () => {
   return (
     <button
       type="button"
-      className={`flex absolute bottom-4rem left-2 md:bottom-4rem md:left-8 items-center text-button-icon sm:text-xs font-semibold uppercase text-color-white2  bg-color-green p-2`}
+      className={`flex fixed bottom-4 left-2 md:bottom-4rem md:left-8 items-center text-button-icon sm:text-xs font-semibold uppercase text-color-white2  bg-color-green p-2 radio-btn`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

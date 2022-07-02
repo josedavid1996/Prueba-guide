@@ -1,7 +1,17 @@
-import { AppRouterGuide } from './routes/AppRouterGuide';
+import { ButtonWSP } from './components/ButtonWSP';
+import { Navlink } from './components/Navlink';
+import { Inicio, Nosotros, Quienes } from './sections';
 
 function AppGuide() {
-  return <AppRouterGuide />;
+  return (
+    <>
+      <Navlink />
+      <Inicio />
+      <Nosotros />
+      <Quienes />
+      <ButtonWSP />
+    </>
+  );
 }
 
 export default AppGuide;

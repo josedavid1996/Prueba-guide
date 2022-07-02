@@ -24,6 +24,12 @@ module.exports = {
       'circle-opacity': '#E7E5E5',
     },
     extend: {
+      maxWidth: {
+        940: '940px',
+      },
+      backgroundImage: {
+        'img-civil': "url('./src/assets/img/civiles.jpg'')",
+      },
       fontSize: {
         h1: '32px',
         'button-icon': '8px',
@@ -32,7 +38,9 @@ module.exports = {
         'sm-button': '10px',
         'sm-link': '15px',
         'title-inicio': '27px',
-        'text-button-lg': '20px',
+        'button-lg': '20px',
+        'title-h2-sm': '27px',
+        100: '100px',
       },
       lineHeight: {
         'line-link': '22px',
@@ -40,27 +48,35 @@ module.exports = {
       },
       spacing: {
         9: '9px',
-        50: '3.125rem',
+        36: '36px',
         46: '2.875rem',
+        50: '3.125rem',
         78: '4.875rem',
         73: '4.5625rem',
+        150: '150px',
         295: '18.43rem',
         387: '24.18rem',
         900: '56.25rem',
         '4rem': '-4rem',
+        760: '47.5rem',
       },
       dropShadow: {
         heroxl: '3px -3px 9px rgba(0, 0, 0, 0.25)',
       },
       minHeight: {
-        '70vh': '70vh',
+        '63vh': '75vh',
       },
       margin: {
-        9: '9px',
+        '9-circle': '9px',
+        36: '36px',
         34: '34px',
         92: '90px',
         75: '75px',
+        62: '62px',
         118: '118px',
+      },
+      screens: {
+        'ms-hero': '900px',
       },
     },
   },

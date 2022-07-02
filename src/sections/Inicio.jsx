@@ -7,13 +7,19 @@ export const Inicio = () => {
   return (
     <>
       {/*======== HERO ==========*/}
-      <section className="relative min-h-70vh bg-hero  mb-75">
-        <div className="sm:container md:flex justify-between">
-          <div className="flex justify-center items-center md:items-start flex-col z-20 absolute  md:static ">
-            <h1 className="font-bold text-h1 mb-6 mt-12 lg:w-387 text-center md:text-left md:text-md-h1">
+      <section className="relative min-h-63vh bg-hero  mb-75">
+        <div className="max-w-940 mx-auto md:flex justify-between">
+          <div className="flex justify-center items-center md:items-start flex-col z-20 absolute  md:static mx-4 ">
+            <h1 className="font-bold text-h1 mb-6 mt-12 lg:w-387 text-center md:text-left ms-hero:text-md-h1">
               PREPÁRATE PARA INGRESAR A LAS ESCUELAS DE LAS FF.AA O PNP
             </h1>
-            <Button text="inscribete" fz="text-button-lg" fzSm="2xl" />
+
+            <button
+              type="button"
+              className="text-button-lg lg:text-4xl font-semibold bg-color-btn text-color-white2 p-2 radio-btn lg:px-3"
+            >
+              INSCRIBETE
+            </button>
           </div>
           <img
             src={foto}
@@ -25,7 +31,7 @@ export const Inicio = () => {
       {/* ======================== */}
 
       {/* CONTENT TEXT */}
-      <section className="container flex flex-col   mt-34 px-10  justify-between md:items-center md:flex-row mb-75 md:mb-118 ">
+      <section className="container flex flex-col   mt-34 px-10  justify-between md:items-center md:flex-row mb-75 md:mb-118 z-40">
         <div className="text-content__group-text mb-8 md:w-2/4 md:mr-92">
           <h2 className="font-bold text-title-inicio leading-line-inicio mb-4 text-center md:text-md-h1">
             Acerca de GUIDE
@@ -41,15 +47,15 @@ export const Inicio = () => {
         </div>
         <div className="text-content__img flex flex-col items-center">
           <img src={imageInicio} alt="imageInicio" className="" />
-          <div className="flex mt-9">
-            <span className="w-9 h-9 block bg-circle rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
-            <span className="w-9 h-9 block bg-circle-opacity rounded-full mr-1"></span>
+          <div className="flex mt-9-circle">
+            <span className="circle"></span>
+            <span className="circle-opacity"></span>
+            <span className="circle-opacity"></span>
+            <span className="circle-opacity"></span>
+            <span className="circle-opacity"></span>
+            <span className="circle-opacity"></span>
+            <span className="circle-opacity"></span>
+            <span className="circle-opacity"></span>
           </div>
         </div>
       </section>
