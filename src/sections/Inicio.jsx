@@ -7,9 +7,9 @@ export const Inicio = () => {
   return (
     <>
       {/*======== HERO ==========*/}
-      <section className="relative min-h-63vh bg-hero  mb-75">
+      <section className="relative min-h-63vh bg-hero  mb-34 md:mb-24">
         <div className="max-w-940 mx-auto md:flex justify-between">
-          <div className="flex justify-center items-center md:items-start flex-col z-20 absolute  md:static mx-4 ">
+          <div className="flex justify-center items-center md:items-start flex-col z-20 absolute  md:static mx-4 animate__animated animate__fadeInLeft">
             <h1 className="font-bold text-h1 mb-6 mt-12 lg:w-387 text-center md:text-left ms-hero:text-md-h1">
               PREPÁRATE PARA INGRESAR A LAS ESCUELAS DE LAS FF.AA O PNP
             </h1>
@@ -24,15 +24,18 @@ export const Inicio = () => {
           <img
             src={foto}
             alt=""
-            className="absolute  mx-auto md:mr-0 drop-shadow-heroxl z-10 opacity-40 max-h-full bottom-0 inset-x-0 md:static md:opacity-100"
+            className="absolute  mx-auto md:mr-0 drop-shadow-heroxl z-10 opacity-40 max-h-full bottom-0 inset-x-0 md:static md:opacity-100 animate__animated animate__fadeInRight"
           />
         </div>
       </section>
       {/* ======================== */}
 
       {/* CONTENT TEXT */}
-      <section className="container flex flex-col   mt-34 px-10  justify-between md:items-center md:flex-row mb-75 md:mb-118 z-40">
-        <div className="text-content__group-text mb-8 md:w-2/4 md:mr-92">
+      <section
+        className="max-w-940 mx-auto flex flex-col  px-10  justify-between md:items-center md:flex-row mb-75 md:mb-118 z-40"
+        id="inicio"
+      >
+        <div className="text-content__group-text mb-8 md:w-2/4 md:mr-92 wow animate__animated animate__fadeInLeft">
           <h2 className="font-bold text-title-inicio leading-line-inicio mb-4 text-center md:text-md-h1">
             Acerca de GUIDE
           </h2>
@@ -45,7 +48,7 @@ export const Inicio = () => {
             garantizarán resultados positivos.
           </p>
         </div>
-        <div className="text-content__img flex flex-col items-center">
+        <div className="text-content__img flex flex-col items-center wow animate__animated animate__fadeInRight">
           <img src={imageInicio} alt="imageInicio" className="" />
           <div className="flex mt-9-circle">
             <span className="circle"></span>

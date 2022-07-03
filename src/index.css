@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   @apply font-poppins;
   overflow-x: hidden;
@@ -22,13 +24,69 @@ body {
   .radio-6 {
     border-radius: 6px;
   }
+  .radio-7 {
+    border-radius: 7px;
+  }
+  .radio-23 {
+    border-radius: 23px;
+  }
+  .radio-24 {
+    border-radius: 24px;
+  }
   .radio-btn {
     border-radius: 92px;
+  }
+  .radio-14 {
+    border-radius: 14px;
   }
   .bg-image-civil {
     background-image: url('./assets/img/civiles.png');
   }
   .bg-image-militar {
-    background-image: url('./assets/img/civiles.png');
+    background-image: url('./assets/img/militar.png');
   }
+  .bg-banner {
+    background-image: url('./assets/img/banner-purple.png');
+  }
+  .shadow-oficial {
+    box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .title-footer {
+    @apply font-semibold text-xs;
+  }
+  .text-footer {
+    @apply text-xs font-normal;
+  }
+  .card-circle__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: 1s;
+  }
+  .card-circle .front {
+    transform: perspective(500px) rotateY(0deg);
+  }
+
+  .card-circle .back {
+    transform: perspective(500px) rotateY(180deg);
+  }
+  .card-circle:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+  }
+
+  .card-circle:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+  }
+  .bg-position-c-b {
+    background-position: center bottom;
+  }
+  /* .slider {
+    width: 95% !important;
+    margin: 0 auto !important;
+  } */
 }

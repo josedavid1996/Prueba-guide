@@ -10,7 +10,7 @@ export const Navlink = () => {
   };
   return (
     <>
-      <header className="bg-header py-4 relative z-50">
+      <header className="bg-header py-4 z-50 sticky top-0">
         <section className="max-w-940 mx-auto flex justify-between px-4  items-center relative sm:px-4 animate__animated animate__fadeInLeft">
           <img src={logo} alt="logo" className="w-50 h-46 sm:w-78 sm:h-73" />
           <div className="flex">
@@ -20,7 +20,7 @@ export const Navlink = () => {
               </p>
               <button
                 type="button"
-                className={`rounded-full text-sm md:text-2xl font-semibold bg-color-btn text-color-white2 p-2 radio-btn `}
+                className={`rounded-full text-sm md:text-2xl font-semibold bg-color-btn text-color-white2 p-2 radio-btn`}
               >
                 CLASE GRATUITA
               </button>
@@ -42,54 +42,48 @@ export const Navlink = () => {
             <ul>
               <li>
                 <a
-                  href="/"
+                  href="#inicio"
                   className="font-medium text-lg pt-2 sm:text-sm-link sm:line-link pb-2.5 border-b border-l-color-black block"
-                  to="/inicio"
                 >
                   Acerca de GUIDE
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="#nosotros"
                   className="font-medium text-lg pt-2 pb-2.5 border-b border-l-color-black block sm:text-sm-link sm:line-link "
-                  to="nosotros"
                 >
                   ¿Por que nosotros
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="#quienes"
                   className="font-medium text-lg pt-2 pb-2.5 border-b border-l-color-black block sm:text-sm-link sm:line-link "
-                  to="quienes"
                 >
                   ¿A quienes nos dirigimos?
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="#descubre"
                   className="font-medium text-lg pt-2 pb-2.5 border-b border-l-color-black block sm:text-sm-link sm:line-link "
-                  to="descubre"
                 >
                   Descubre lo que te enseñamos
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="#aula"
                   className="font-medium text-lg pt-2 pb-2.5 border-b border-l-color-black block sm:text-sm-link sm:line-link "
-                  to="aula"
                 >
                   Explora nuestra aula virtual
                 </a>
               </li>
               <li>
                 <a
-                  href="/"
+                  href="#integrantes"
                   className="font-medium text-lg pt-2 pb-2.5 border- border-l-color-black block sm:text-sm-link sm:line-link "
-                  to="integrante"
                 >
                   Nuestros ingenieros
                 </a>

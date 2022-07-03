@@ -1,6 +1,14 @@
 import { ButtonWSP } from './components/ButtonWSP';
+import { Footer } from './components/Footer';
 import { Navlink } from './components/Navlink';
-import { Inicio, Nosotros, Quienes } from './sections';
+import {
+  AulaVirtual,
+  Descubre,
+  Inicio,
+  Integrantes,
+  Nosotros,
+  Quienes,
+} from './sections';
 
 function AppGuide() {
   return (
@@ -9,6 +17,10 @@ function AppGuide() {
       <Inicio />
       <Nosotros />
       <Quienes />
+      <Descubre />
+      <AulaVirtual />
+      <Integrantes />
+      <Footer />
       <ButtonWSP />
     </>
   );

@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.964c64d2.css",
+    "main.js": "/static/js/main.439af681.js",
+    "static/media/oficial-2.svg": "/static/media/oficial-2.e8f5c557d8b0c96dbfd6b2b92ba12f04.svg",
+    "static/media/foto-giro.png": "/static/media/foto-giro.100aa4eac300f110e52c.png",
+    "static/media/image_inicio.png": "/static/media/image_inicio.2a150618bc94680fb18f.png",
+    "static/media/militar.png": "/static/media/militar.42480eed4f5bbd99c205.png",
+    "static/media/civiles.png": "/static/media/civiles.77708efc3d9ad2a97bca.png",
+    "static/media/oficial-4.png": "/static/media/oficial-4.0764a573f4f1f683f45d.png",
+    "static/media/oficial-1.png": "/static/media/oficial-1.4a36863f11ac73c2ec0b.png",
+    "static/media/suboficial-4.png": "/static/media/suboficial-4.b86c58e1e3421c4c78da.png",
+    "static/media/img-carruosel2.png": "/static/media/img-carruosel2.9511a979b411a9984398.png",
+    "static/media/oficial-3.png": "/static/media/oficial-3.ecb4a8208a8218d3d764.png",
+    "static/media/suboficial-2.png": "/static/media/suboficial-2.833482fe57eb0ae03784.png",
+    "static/media/img-carruosel3.png": "/static/media/img-carruosel3.0b561fb515662e263ec3.png",
+    "static/media/suboficial-3.png": "/static/media/suboficial-3.fde4b5387f5489f5b56d.png",
+    "static/media/suboficial-1.png": "/static/media/suboficial-1.8d89fee451ef1f72e6ff.png",
+    "static/media/beca-2.png": "/static/media/beca-2.afb46b2a3f16389ae2c3.png",
+    "static/media/img-carruosel1.png": "/static/media/img-carruosel1.75d47f55ec1d41d840f5.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "static/media/icon-menu.svg": "/static/media/icon-menu.f3b05a30236e6a20e7a759ff4226be88.svg",
+    "main.964c64d2.css.map": "/static/css/main.964c64d2.css.map",
+    "main.439af681.js.map": "/static/js/main.439af681.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964c64d2.css",
+    "static/js/main.439af681.js"
+  ]
+}
