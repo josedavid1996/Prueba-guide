@@ -88,4 +88,11 @@ body {
   .gris-img {
     filter: grayscale(100%);
   }
+  .button-active {
+    @apply w-139 text-lg font-bold bg-color-btn text-color-white2  radio-14 p-2 mt-18;
+  }
+
+  .button-noactive {
+    @apply w-139 text-lg font-bold text-color-black border border-color-black  radio-14 p-2 mt-18;
+  }
 }

@@ -16,12 +16,14 @@ import beca1 from '../assets/img/beca-1.png';
 import beca2 from '../assets/img/beca-2.png';
 
 export const Descubre = () => {
-  const [imgOficial, setImgOficial] = useState([
-    { oficial1: false },
-    { oficial2: false },
-    { oficial3: false },
-    { oficial4: false },
-  ]);
+  const [imgOficial, setImgOficial] = useState({
+    oficial1: true,
+    oficial2: true,
+    oficial3: true,
+    oficial4: true,
+  });
+
+  const [buttonActiveOficial, setButtonActiveOficial] = useState(false);
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -32,7 +34,10 @@ export const Descubre = () => {
     for (let img in imgOficial) {
       if (id === img) {
         setImgOficial({ ...imgOficial, [id]: true });
+        setButtonActiveOficial(true);
+        console.log(id);
       } else {
+        setImgOficial({ ...imgOficial, [img]: false });
       }
     }
   };
@@ -60,7 +65,7 @@ export const Descubre = () => {
               <div className="group-img grid grid-cols-2 gap-y-5">
                 <img
                   className={`mx-auto  cursor-pointer ${
-                    imgOficial[0].oficial1 ? '' : 'gris-img'
+                    imgOficial.oficial1 ? '' : 'gris-img'
                   }`}
                   src={oficial1}
                   alt="oficial1"
@@ -70,7 +75,7 @@ export const Descubre = () => {
                 />
                 <img
                   className={`mx-auto  cursor-pointer ${
-                    imgOficial[1].oficial2 ? '' : 'gris-img'
+                    imgOficial.oficial2 ? '' : 'gris-img'
                   }`}
                   src={oficial2}
                   alt="oficial2"
@@ -80,14 +85,14 @@ export const Descubre = () => {
                 />
                 <img
                   className={`mx-auto  cursor-pointer ${
-                    imgOficial[2].oficial3 ? '' : 'gris-img'
+                    imgOficial.oficial3 ? '' : 'gris-img'
                   }`}
                   src={oficial3}
                   alt="oficial3"
                 />
                 <img
                   className={`mx-auto  cursor-pointer ${
-                    imgOficial[3].oficial4 ? '' : 'gris-img'
+                    imgOficial.oficial4 ? '' : 'gris-img'
                   }`}
                   src={oficial4}
                   alt="oficial4"
@@ -95,7 +100,9 @@ export const Descubre = () => {
               </div>
               <button
                 type="button"
-                className="w-139 text-lg font-bold bg-color-btn text-color-white2  radio-14 p-2 mt-18"
+                className={
+                  buttonActiveOficial ? 'button-active' : 'button-noactive '
+                }
               >
                 Descargar temario
               </button>
