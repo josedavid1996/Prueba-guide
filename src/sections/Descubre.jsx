@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import WOW from 'wowjs';
 
@@ -16,11 +16,27 @@ import beca1 from '../assets/img/beca-1.png';
 import beca2 from '../assets/img/beca-2.png';
 
 export const Descubre = () => {
+  const [imgOficial, setImgOficial] = useState([
+    { oficial1: false },
+    { oficial2: false },
+    { oficial3: false },
+    { oficial4: false },
+  ]);
   useEffect(() => {
     new WOW.WOW({
       live: false,
     }).init();
   }, []);
+
+  const handleClickImage = (id) => {
+    for (let img in imgOficial) {
+      if (id === img) {
+        setImgOficial({ ...imgOficial, [id]: true });
+      } else {
+      }
+    }
+  };
+
   return (
     <>
       <div className="pt-7 lg:pt-52 bg-hero" id="descubre">
@@ -42,10 +58,40 @@ export const Descubre = () => {
             <div className="card-oficial w-275 h-390 py-7 radio-23 shadow-oficial flex flex-col items-center justify-center mb-34 bg-color-white2 wow animate__animated animate__bounceInUp">
               <h3 className="text-center font-bold text-30 mb-25 ">Oficial</h3>
               <div className="group-img grid grid-cols-2 gap-y-5">
-                <img className="mx-auto" src={oficial1} alt="oficial1" />
-                <img className="mx-auto" src={oficial2} alt="oficial2" />
-                <img className="mx-auto" src={oficial3} alt="oficial3" />
-                <img className="mx-auto" src={oficial4} alt="oficial4" />
+                <img
+                  className={`mx-auto  cursor-pointer ${
+                    imgOficial[0].oficial1 ? '' : 'gris-img'
+                  }`}
+                  src={oficial1}
+                  alt="oficial1"
+                  onClick={() => {
+                    handleClickImage('oficial1');
+                  }}
+                />
+                <img
+                  className={`mx-auto  cursor-pointer ${
+                    imgOficial[1].oficial2 ? '' : 'gris-img'
+                  }`}
+                  src={oficial2}
+                  alt="oficial2"
+                  onClick={() => {
+                    handleClickImage('oficial2');
+                  }}
+                />
+                <img
+                  className={`mx-auto  cursor-pointer ${
+                    imgOficial[2].oficial3 ? '' : 'gris-img'
+                  }`}
+                  src={oficial3}
+                  alt="oficial3"
+                />
+                <img
+                  className={`mx-auto  cursor-pointer ${
+                    imgOficial[3].oficial4 ? '' : 'gris-img'
+                  }`}
+                  src={oficial4}
+                  alt="oficial4"
+                />
               </div>
               <button
                 type="button"
