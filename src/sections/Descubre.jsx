@@ -16,31 +16,78 @@ import beca1 from '../assets/img/beca-1.png';
 import beca2 from '../assets/img/beca-2.png';
 
 export const Descubre = () => {
-  const [imgOficial, setImgOficial] = useState({
-    oficial1: true,
-    oficial2: true,
-    oficial3: true,
-    oficial4: true,
-  });
-
+  // =======CARD1==========
   const [buttonActiveOficial, setButtonActiveOficial] = useState(false);
+  const [imgOficial, setImgOficial] = useState({
+    oficial1: false,
+    oficial2: false,
+    oficial3: false,
+    oficial4: false,
+  });
+  const handleClickImageOficial = (id) => {
+    for (let img in imgOficial) {
+      setImgOficial((prev) => {
+        if (img === id) {
+          setButtonActiveOficial(true);
+          return { ...prev, [img]: true };
+        } else {
+          return { ...prev, [img]: false };
+        }
+      });
+    }
+  };
+
+  // ============================
+
+  // =======CARD2==========
+  const [buttonActiveSubOficial, setButtonActiveSubOficial] = useState(false);
+  const [imgSubOficial, setImgSubOficial] = useState({
+    subOficial1: false,
+    subOficial2: false,
+    subOficial3: false,
+    subOficial4: false,
+  });
+  const handleClickImageSubOficial = (id) => {
+    for (let img in imgSubOficial) {
+      setImgSubOficial((prev) => {
+        if (img === id) {
+          setButtonActiveSubOficial(true);
+          return { ...prev, [img]: true };
+        } else {
+          return { ...prev, [img]: false };
+        }
+      });
+    }
+  };
+  // ============================
+
+  // =======CARD3==========
+  const [buttonActiveBeca, setSubButtonActiveBeca] = useState(false);
+  const [imgBeca, setImageBeca] = useState({
+    beca1: false,
+    beca2: false,
+    beca3: false,
+    beca4: false,
+  });
+  const handleClickImageBeca = (id) => {
+    for (let img in imgBeca) {
+      setImageBeca((prev) => {
+        if (img === id) {
+          setSubButtonActiveBeca(true);
+          return { ...prev, [img]: true };
+        } else {
+          return { ...prev, [img]: false };
+        }
+      });
+    }
+  };
+  // ============================
+
   useEffect(() => {
     new WOW.WOW({
       live: false,
     }).init();
   }, []);
-
-  const handleClickImage = (id) => {
-    for (let img in imgOficial) {
-      if (id === img) {
-        setImgOficial({ ...imgOficial, [id]: true });
-        setButtonActiveOficial(true);
-        console.log(id);
-      } else {
-        setImgOficial({ ...imgOficial, [img]: false });
-      }
-    }
-  };
 
   return (
     <>
@@ -70,7 +117,7 @@ export const Descubre = () => {
                   src={oficial1}
                   alt="oficial1"
                   onClick={() => {
-                    handleClickImage('oficial1');
+                    handleClickImageOficial('oficial1');
                   }}
                 />
                 <img
@@ -80,7 +127,7 @@ export const Descubre = () => {
                   src={oficial2}
                   alt="oficial2"
                   onClick={() => {
-                    handleClickImage('oficial2');
+                    handleClickImageOficial('oficial2');
                   }}
                 />
                 <img
@@ -89,6 +136,9 @@ export const Descubre = () => {
                   }`}
                   src={oficial3}
                   alt="oficial3"
+                  onClick={() => {
+                    handleClickImageOficial('oficial3');
+                  }}
                 />
                 <img
                   className={`mx-auto  cursor-pointer ${
@@ -96,6 +146,9 @@ export const Descubre = () => {
                   }`}
                   src={oficial4}
                   alt="oficial4"
+                  onClick={() => {
+                    handleClickImageOficial('oficial4');
+                  }}
                 />
               </div>
               <button
@@ -115,14 +168,52 @@ export const Descubre = () => {
                 Sub Oficiales
               </h3>
               <div className="group-img grid grid-cols-2 gap-y-5 gap-x-7">
-                <img className="mx-auto" src={subOficial1} alt="subOficial1" />
-                <img className="mx-auto" src={subOficial2} alt="subOficial2" />
-                <img className="mx-auto" src={subOficial3} alt="subOficial3" />
-                <img className="mx-auto" src={subOficial4} alt="subOficial4" />
+                <img
+                  className={`mx-auto cursor-pointer ${
+                    imgSubOficial.subOficial1 ? '' : 'gris-img '
+                  }`}
+                  src={subOficial1}
+                  alt="subOficial1"
+                  onClick={() => {
+                    handleClickImageSubOficial('subOficial1');
+                  }}
+                />
+                <img
+                  className={`mx-auto cursor-pointer ${
+                    imgSubOficial.subOficial2 ? '' : 'gris-img'
+                  }`}
+                  src={subOficial2}
+                  alt="subOficial2"
+                  onClick={() => {
+                    handleClickImageSubOficial('subOficial2');
+                  }}
+                />
+                <img
+                  className={`mx-auto cursor-pointer ${
+                    imgSubOficial.subOficial3 ? '' : 'gris-img'
+                  }`}
+                  src={subOficial3}
+                  alt="subOficial3"
+                  onClick={() => {
+                    handleClickImageSubOficial('subOficial3');
+                  }}
+                />
+                <img
+                  className={`mx-auto cursor-pointer ${
+                    imgSubOficial.subOficial4 ? '' : 'gris-img'
+                  }`}
+                  src={subOficial4}
+                  alt="subOficial4"
+                  onClick={() => {
+                    handleClickImageSubOficial('subOficial4');
+                  }}
+                />
               </div>
               <button
                 type="button"
-                className="w-139 text-lg font-bold text-color-black border border-color-black  radio-14 p-2 mt-18"
+                className={
+                  buttonActiveSubOficial ? 'button-active' : 'button-noactive '
+                }
               >
                 Descargar temario
               </button>
@@ -136,12 +227,32 @@ export const Descubre = () => {
                 BECA 18 / IESTFFAA
               </h3>
               <div className="group-img grid grid-cols-1 gap-y-5 gap-x-7">
-                <img className="mx-auto" src={beca1} alt="beca1" />
-                <img className="mx-auto" src={beca2} alt="beca2" />
+                <img
+                  className={`mx-auto cursor-pointer ${
+                    imgBeca.beca1 ? '' : 'gris-img'
+                  }`}
+                  src={beca1}
+                  alt="beca1"
+                  onClick={() => {
+                    handleClickImageBeca('beca1');
+                  }}
+                />
+                <img
+                  className={`mx-auto cursor-pointer ${
+                    imgBeca.beca2 ? '' : 'gris-img'
+                  }`}
+                  src={beca2}
+                  alt="beca2"
+                  onClick={() => {
+                    handleClickImageBeca('beca2');
+                  }}
+                />
               </div>
               <button
                 type="button"
-                className="w-139 text-lg font-bold text-color-black border border-color-black  radio-14 p-2 mt-18"
+                className={
+                  buttonActiveBeca ? 'button-active' : 'button-noactive '
+                }
               >
                 Descargar temario
               </button>
